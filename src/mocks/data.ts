@@ -5,65 +5,56 @@ import { AvailableProduct, Product } from "~/models/Product";
 
 export const products: Product[] = [
   {
-    description: "Short Product Description1",
-    id: "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
-    price: 24,
-    title: "ProductOne",
+    description: "Stealth game full of history",
+    id: "0dc22571-881a-411d-b20e-71c5c7b68c3c",
+    price: 69.99,
+    title: `Assassin's creed`,
   },
   {
-    description: "Short Product Description7",
-    id: "7567ec4b-b10c-48c5-9345-fc73c48a80a1",
-    price: 15,
-    title: "ProductTitle",
+    description: "Game for real gangsters",
+    id: "c05725f9-613c-4e8b-b465-5636eeab1223",
+    price: 39.99,
+    title: `Grand Theft Auto`,
   },
   {
-    description: "Short Product Description2",
-    id: "7567ec4b-b10c-48c5-9345-fc73c48a80a3",
-    price: 23,
-    title: "Product",
+    description: "Game for those who want to forget about life",
+    id: "6e514e91-ae3c-4a8b-85f5-c51c047bf549",
+    price: 99.99,
+    title: `World of Warcraft`,
   },
   {
-    description: "Short Product Description4",
-    id: "7567ec4b-b10c-48c5-9345-fc73348a80a1",
-    price: 15,
-    title: "ProductTest",
-  },
-  {
-    description: "Short Product Descriptio1",
-    id: "7567ec4b-b10c-48c5-9445-fc73c48a80a2",
-    price: 23,
-    title: "Product2",
-  },
-  {
-    description: "Short Product Description7",
-    id: "7567ec4b-b10c-45c5-9345-fc73c48a80a1",
-    price: 15,
-    title: "ProductName",
+    description: "Best FPS game",
+    id: "65998305-5c73-49f7-8fad-e7190574185f",
+    price: 19.99,
+    title: `Counter Strike`,
   },
 ];
 
 export const availableProducts: AvailableProduct[] = products.map(
-  (product, index) => ({ ...product, count: index + 1 })
+  (product, index) => ({
+    ...product,
+    count: index + 1,
+  })
 );
 
 export const cart: CartItem[] = [
   {
     product: {
-      description: "Short Product Description1",
-      id: "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
-      price: 24,
-      title: "ProductOne",
+      description: "Stealth game full of history",
+      id: "0dc22571-881a-411d-b20e-71c5c7b68c3c",
+      price: 69.99,
+      title: `Assassin's creed`,
     },
     count: 2,
   },
   {
     product: {
-      description: "Short Product Description7",
-      id: "7567ec4b-b10c-45c5-9345-fc73c48a80a1",
-      price: 15,
-      title: "ProductName",
+      description: "Best FPS game",
+      id: "65998305-5c73-49f7-8fad-e7190574185f",
+      price: 19.99,
+      title: `Counter Strike`,
     },
-    count: 5,
+    count: 3,
   },
 ];
 
@@ -71,14 +62,14 @@ export const orders: Order[] = [
   {
     id: "1",
     address: {
-      address: "some address",
-      firstName: "Name",
-      lastName: "Surname",
-      comment: "",
+      address: "East Blue",
+      firstName: "Monkey D",
+      lastName: "Luffy",
+      comment: "I love the adventure",
     },
     items: [
-      { productId: "7567ec4b-b10c-48c5-9345-fc73c48a80aa", count: 2 },
-      { productId: "7567ec4b-b10c-45c5-9345-fc73c48a80a1", count: 5 },
+      { productId: "0dc22571-881a-411d-b20e-71c5c7b68c3c", count: 2 },
+      { productId: "65998305-5c73-49f7-8fad-e7190574185f", count: 3 },
     ],
     statusHistory: [
       { status: OrderStatus.Open, timestamp: Date.now(), comment: "New order" },
@@ -87,12 +78,12 @@ export const orders: Order[] = [
   {
     id: "2",
     address: {
-      address: "another address",
-      firstName: "John",
-      lastName: "Doe",
-      comment: "Ship fast!",
+      address: "North Blue",
+      firstName: "Sanji",
+      lastName: "Vinsmoke",
+      comment: "I like how ladies look in game",
     },
-    items: [{ productId: "7567ec4b-b10c-48c5-9345-fc73c48a80aa", count: 3 }],
+    items: [{ productId: "c05725f9-613c-4e8b-b465-5636eeab1223", count: 10 }],
     statusHistory: [
       {
         status: OrderStatus.Sent,
