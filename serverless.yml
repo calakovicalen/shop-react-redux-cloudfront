@@ -13,7 +13,7 @@ plugins:
 
 custom:
   client:
-    bucketName: task2-bucket-auto
+    bucketName: front-bucket-auto
     distributionFolder: dist
     indexDocument: index.html
     manageResources: false

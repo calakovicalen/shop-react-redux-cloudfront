@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import axios from "axios";
 
 type CSVFileImportProps = {
   url: string;
@@ -9,6 +10,11 @@ type CSVFileImportProps = {
 
 export default function CSVFileImport({ url, title }: CSVFileImportProps) {
   const [file, setFile] = React.useState<File>();
+  let encodedName = "";
+
+  if (file && file.name) {
+    encodedName = encodeURIComponent(file.name);
+  }
 
   const onFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
@@ -30,17 +36,17 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
       method: "GET",
       url,
       params: {
-        name: encodeURIComponent(file.name),
+        name: encodeURIComponent(encodedName),
       },
     });
-    console.log("File to upload: ", file.name);
+    console.log("File to upload: ", encodedName);
     console.log("Uploading to: ", response.data);
     const result = await fetch(response.data, {
       method: "PUT",
       body: file,
     });
     console.log("Result: ", result);
-    setFile("");
+    setFile(undefined);
   };
   return (
     <Box>
