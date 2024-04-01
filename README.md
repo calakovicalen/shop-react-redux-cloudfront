@@ -1,2 +1,2 @@
-CloudFront URL: https://d190b4ygizjy5d.cloudfront.net/
-S3 URL: https://shop-react-redux-cloudfront-alen.s3.amazonaws.com/index.html
+CloudFront URL: https://d9p7512l99uos.cloudfront.net/
+S3 URL: http://front-bucket-auto.s3-website-eu-west-1.amazonaws.com/
